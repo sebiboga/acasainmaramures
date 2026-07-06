@@ -137,7 +137,7 @@ nav .container {
   justify-content: center;
   text-align: center;
   position: relative;
-  background: linear-gradient(rgba(0,0,0,.55),rgba(0,0,0,.55)),url('images/home-new.jpg') center/cover fixed;
+  background: linear-gradient(rgba(0,0,0,.55),rgba(0,0,0,.55)),url('images/hero-bg.jpg') center/cover fixed;
   overflow: hidden;
   padding: 120px 20px 80px;
 }
