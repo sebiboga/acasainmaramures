@@ -276,12 +276,39 @@ nav .container {
   display: flex;
   align-items: flex-end;
   padding: 0;
+  overflow: hidden;
+  position: relative;
+  transition: transform .4s ease;
+}
+
+.team-card-img::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,.55);
+  transition: opacity .4s ease;
+  z-index: 1;
+}
+
+.team-card-img:hover::before {
+  opacity: 0;
+}
+
+.team-card-img:hover {
+  background-size: 110%;
 }
 
 .team-card-img .team-card-overlay {
   padding: 30px 24px;
   width: 100%;
   border-radius: 0 0 var(--radius) var(--radius);
+  position: relative;
+  z-index: 2;
+  transition: opacity .4s ease;
+}
+
+.team-card-img:hover .team-card-overlay {
+  opacity: .15;
 }
 
 .team-card:hover {
