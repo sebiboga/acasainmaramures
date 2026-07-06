@@ -269,6 +269,21 @@ nav .container {
   transition: all var(--transition);
 }
 
+.team-card-img {
+  background-size: cover;
+  background-position: center;
+  min-height: 380px;
+  display: flex;
+  align-items: flex-end;
+  padding: 0;
+}
+
+.team-card-img .team-card-overlay {
+  padding: 30px 24px;
+  width: 100%;
+  border-radius: 0 0 var(--radius) var(--radius);
+}
+
 .team-card:hover {
   transform: translateY(-8px);
   box-shadow: var(--shadow-hover);
