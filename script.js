@@ -205,12 +205,9 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   // Active nav link
-  const currentPath = window.location.pathname;
+  const currentPage = window.location.pathname.split('/').pop() || 'index.html';
   document.querySelectorAll('.nav-links a').forEach(link => {
-    const href = link.getAttribute('href');
-    if (href === currentPath || (currentPath === '/' && href === '/')) {
-      link.classList.add('active');
-    } else if (href !== '/' && currentPath.startsWith(href)) {
+    if (link.getAttribute('href') === currentPage) {
       link.classList.add('active');
     }
   });
