@@ -1324,6 +1324,57 @@ footer .bottom {
   transform: translateY(-3px);
 }
 
+/* Location section */
+.location-grid {
+  display: grid;
+  grid-template-columns: 1fr 1.5fr;
+  gap: 40px;
+  margin-top: 40px;
+  align-items: start;
+}
+
+.location-info {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.loc-address {
+  display: flex;
+  gap: 14px;
+  align-items: flex-start;
+}
+
+.loc-address svg {
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+.loc-address strong {
+  display: block;
+  font-family: var(--font-heading);
+  font-size: .9rem;
+  color: var(--green-dark);
+  margin-bottom: 4px;
+}
+
+.loc-address p {
+  font-size: .88rem;
+  color: var(--text-light);
+  line-height: 1.6;
+}
+
+.location-map iframe {
+  width: 100%;
+  box-shadow: 0 4px 20px rgba(0,0,0,.08);
+}
+
+@media (max-width: 768px) {
+  .location-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
 /* Facilities grid */
 .facilities-grid {
   display: grid;
