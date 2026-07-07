@@ -249,9 +249,10 @@ nav .container {
 }
 
 .btn-green:hover {
-  background: var(--green-light);
+  background: var(--gold);
+  color: var(--green-dark);
   transform: translateY(-2px);
-  box-shadow: 0 8px 30px rgba(45,90,39,.3);
+  box-shadow: 0 8px 30px rgba(196,154,60,.3);
 }
 
 /* Sections */
