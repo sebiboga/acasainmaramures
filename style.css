@@ -154,7 +154,7 @@ nav .container {
 }
 
 .hero-bg-image.loaded {
-  animation: heroFadeIn 4s ease-out forwards;
+  animation: heroFadeIn 4s ease-out 2s both;
 }
 
 @keyframes heroFadeIn {
