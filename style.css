@@ -1270,6 +1270,17 @@ footer .social-links a:hover {
   border-color: var(--white);
 }
 
+footer .social-links a.social-bg-white {
+  background: var(--white);
+  color: var(--green-dark);
+  border-color: var(--white);
+}
+
+footer .social-links a.social-bg-white:hover {
+  background: var(--cream);
+  color: var(--green-dark);
+}
+
 footer .bottom {
   grid-column: 1 / -1;
   border-top: 1px solid rgba(255,255,255,.1);
