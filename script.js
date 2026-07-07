@@ -204,10 +204,27 @@ document.addEventListener('DOMContentLoaded', () => {
     fadeEls.forEach(el => observer.observe(el));
   }
 
-  // Active nav link
-  const currentPage = window.location.pathname.split('/').pop() || 'index.html';
+  // Hero image progressive fade-in
+  const heroImg = document.querySelector('.hero-bg-image');
+  if (heroImg) {
+    const done = () => {
+      heroImg.classList.add('loaded');
+      document.querySelector('.hero')?.classList.add('bg-loaded');
+    };
+    if (heroImg.complete) {
+      done();
+    } else {
+      heroImg.addEventListener('load', done);
+      heroImg.addEventListener('error', done);
+    }
+  }
+
+  // Active nav link (folder-based paths)
+  const firstSegment = window.location.pathname.split('/')[1] || '';
   document.querySelectorAll('.nav-links a').forEach(link => {
-    if (link.getAttribute('href') === currentPage) {
+    const href = link.getAttribute('href');
+    const linkFolder = href.replace('../', '').replace(/\/$/, '');
+    if ((firstSegment === '' && linkFolder === 'index.html') || linkFolder === firstSegment) {
       link.classList.add('active');
     }
   });
