@@ -1376,6 +1376,46 @@ footer .bottom {
   }
 }
 
+/* Detailed amenities */
+.amenities-detailed {
+  margin-top: 40px;
+}
+
+.amenity-category {
+  margin-bottom: 32px;
+}
+
+.amenity-category h3 {
+  font-family: var(--font-heading);
+  font-size: 1.05rem;
+  color: var(--green-dark);
+  margin-bottom: 12px;
+  padding-bottom: 6px;
+  border-bottom: 2px solid var(--cream-dark);
+}
+
+.amenity-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.amenity-tag {
+  background: var(--white);
+  border: 1px solid var(--cream-dark);
+  border-radius: 20px;
+  padding: 5px 14px;
+  font-size: .82rem;
+  color: var(--text);
+  transition: all var(--transition);
+}
+
+.amenity-tag:hover {
+  background: var(--green);
+  color: var(--white);
+  border-color: var(--green);
+}
+
 /* Facilities grid */
 .facilities-grid {
   display: grid;
